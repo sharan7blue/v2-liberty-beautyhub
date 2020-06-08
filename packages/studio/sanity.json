@@ -1,11 +1,11 @@
 {
   "root": true,
   "project": {
-    "name": "PROJECT_NAME"
+    "name": "v2-liberty-beautyhub"
   },
   "api": {
-    "projectId": "PROJECT_ID",
-    "dataset": "DATASET_ID"
+    "projectId": "czszrhda",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
