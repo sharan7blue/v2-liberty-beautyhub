@@ -49,5 +49,5 @@
                   npm install --save core-js@^3
                   npm install chromedriver –g
                   npm install axe-cli -g
-                  axe https://www.nexxus.com/uk/home.html --tags wcag2aa
+                  axe https://www.nexxus.com/uk/home.html
          
