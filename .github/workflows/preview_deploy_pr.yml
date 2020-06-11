@@ -65,4 +65,18 @@ jobs:
             run: |
                  npm i structured-data-testing-tool -g
                  sdtt --url  ${{ needs.deploy_preview.outputs.url }} --schemas "jsonld:Article"  -p Twitter -p Facebook --presets SocialMedia -i
+
+    pally:
+      runs-on: ubuntu-latest
+      name: pally
+      needs: [deploy_preview]
+      steps:
+          - name: Use Node.js 12.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: 12.x
+          - name: Run Structured Data
+            run: |
+                  npm i axe-cli -g
+                  axe https://www.nexxus.com/uk/home.html --timeout=120 --save results.json  --tags wcag2a
          
