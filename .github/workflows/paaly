@@ -49,5 +49,5 @@ name: Preview
                   npm install --save core-js@^3
                   npm install chromedriver –g
                   npm install axe-cli -g
-                  axe https://www.nexxus.com/uk/home.html
+                  axe https://www.nexxus.com/uk/home.html --timeout=120 --save results.json  --tags wcag2a
          
