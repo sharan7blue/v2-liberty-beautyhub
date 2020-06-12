@@ -77,5 +77,5 @@ jobs:
           - name: Run Structured Data
             run: |
                   npm i axe-cli -g
-                  axe https://deploy-preview-31--liberty-portal.netlify.app/hair-style/how-to-do-a-dutch-braid-in-six-easy-steps/ --tags wcag2aa
+                  axe https://deploy-preview-31--liberty-portal.netlify.app/hair-style/20-best-box-braids-bob-styles-to-try-in-2020/ --tags wcag2aa
          
