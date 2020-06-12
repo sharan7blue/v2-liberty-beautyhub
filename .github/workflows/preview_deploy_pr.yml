@@ -65,4 +65,18 @@ jobs:
             run: |
                  npm i structured-data-testing-tool -g
                  sdtt --url  ${{ needs.deploy_preview.outputs.url }} --schemas "jsonld:Article"  -p Twitter -p Facebook --presets SocialMedia -i
+                 
+    axe:
+      runs-on: ubuntu-latest
+      name: pally
+      needs: [deploy_preview]
+      steps:
+          - name: Use Node.js 12.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: 12.x
+          - name: Run accessibility pally 
+            run: |
+                  npm i axe-cli -g
+                  axe https://deploy-preview-31--liberty-portal.netlify.app/hair-style/20-best-box-braids-bob-styles-to-try-in-2020/ --tags wcag2aa
          
